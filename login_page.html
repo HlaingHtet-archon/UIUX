@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_page</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.js" defer></script>
+    <style>
+        body {
+            background-color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .registration-container {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            border: 2px solid #03010b;
+            box-shadow: 10px 10px 10px #7B61FF;
+        }
+        #registration-icon {
+            font-size: 50px;
+            color: #7B61FF;
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: inherit;
+            text-decoration: none;
+        }
+        .social-icons a i {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registration-container text-center">
+        <h1 class="mt-4 mb-4">
+            <i class="fas fa-mobile-alt" id="registration-icon"></i>
+            <span class="h3 ms-2 d-none d-lg-inline">Registration Page</span>
+        </h1>
+        <form action="https://www.youtube.com/" method="get">
+            <div class="d-flex mb-3">
+                <label for="username" class="form-label" style="margin-right: 10px;
+                margin-top: 5px;">Username:</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+            </div>
+            <div class="d-flex mb-3">
+                <label for="password" class="form-label" style="margin-right: 15px;
+                margin-top: 5px;">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class="mt-4">
+            <p>Other login methods:</p>
+            <div class="social-icons">
+                <a href="#" class="text-danger"><i class="fab fa-google"></i></a>
+                <a href="#" class="text-info"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-primary"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-warning"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
