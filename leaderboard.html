@@ -25,15 +25,15 @@
             border: none;
         }
 
-        #first {
+        #second {
             background-color: #6970F7;
         }
 
-        #first i {
+        #second i {
             color: #ffffff;
         }
 
-        #first span {
+        #second span {
             color: #ffffff;
         }
 
@@ -140,165 +140,52 @@
         }
 
         .dashboard-container {
-            display: block;
-            background-color: #dad4d4;
-        }
-
-        .first-flex,
-        .second-flex,
-        .third-flex {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             display: flex;
-            height: 250px;
-            padding: 10px;
-            margin-bottom: -30px;
-        }
-
-        .sales-summary,
-        .visitor-insights,
-        .total-revenue,
-        .customer-satisfaction,
-        .target-vs-reality,
-        .top-products,
-        .sales-mapping,
-        .volume-vs-service {
-            background-color: white;
-            border-radius: 10px;
-            height: 200px;
-            margin-top: 5px;
-            margin-left: 15px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .export-button {
-            position: absolute;
-            text-align: right;
-            margin-left: 450px;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #4e73df;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .export-button:hover {
-            background-color: #3a5bbf;
-        }
-
-
-        .sales-summary h2 {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
             margin: 0;
-            font-size: 25px;
         }
 
-        .summary-cards {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .summary-card {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            padding: 10px;
-            margin: 10px;
-            margin-left: 20px;
-            margin-right: 20px;
+        .leaderboard {
+            background-color: #fff;
             border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .leaderboard h1 {
+            background-color: #6970F7;
             color: white;
-            width: 100px;
-            height: 100px;
+            margin: 0;
+            padding: 10px 0;
+            text-align: center;
         }
 
-        .red {
-            background-color: #ff6b6b;
-        }
-
-        .yellow {
-            background-color: #ffd93b;
-        }
-
-        .green {
-            background-color: #6bcf6b;
-        }
-
-        .purple {
-            background-color: #c96bcf;
-        }
-
-        .mid {
-            font-size: 11px;
-        }
-
-        .blueWord {
-            font-size: 8px;
-            color: #1505fa;
-        }
-
-        .visitor-insights {
-            width: 440px;
-        }
-
-        #vsGraph {
-            width: 300px;
-            margin-left: 18%;
-            margin-top: -5px;
-        }
-
-        #trGraph {
-            width: 350px;
-            margin-top: -10px;
-        }
-
-        #csGraph {
-            width: 200px;
-            margin-left: 40px;
-        }
-
-        #tvrGraph {
-            width: 180px;
-            margin-left: 15px;
-        }
-
-        .top-products {
-            font-size: 12px;
-            width: 50%;
-        }
-
-        .top-products table {
+        table {
             width: 100%;
             border-collapse: collapse;
         }
 
-        .top-products th,
-        .top-products td {
-            padding: 5px;
+        th,
+        td {
+            padding: 10px;
             text-align: left;
+            border-bottom: 1px solid #ddd;
         }
 
-        .top-products th {
+        tr:hover {
             background-color: #f1f1f1;
         }
 
-        .popularity-bar {
-            height: 8px;
-            background-color: #4e73df;
-            border-radius: 5px;
-        }
-
-        #smGraph {
-            width: 60%;
-            margin-top: -10px;
-            margin-left: 20%;
-        }
-
-        #vvsGraph {
-            width: 60%;
-            margin-top: -5px;
-            margin-left: 20%;
+        th {
+            background-color: #0a2fff;
+            color: white;
         }
     </style>
 </head>
@@ -312,11 +199,11 @@
                     <span class="ms-2 d-none d-lg-inline">Dabang</span>
                 </h1>
                 <div class="list-group mt-4 mb-4 me-3 text-center text-lg-start" id="menu">
-                    <a href="C:\Users\Toshiba\Desktop\UIUX\dabang.html" class="list-group-item list-group-item-action" id="first">
+                    <a href="C:\Users\Toshiba\Desktop\UIUX\dabang.html" class="list-group-item list-group-item-action">
                         <i class="fa-solid fa-home"></i>
                         <span class="ms-2 d-none d-lg-inline">Dashboard</span>
                     </a>
-                    <a href="C:\Users\Toshiba\Desktop\UIUX\leaderboard.html" class="list-group-item list-group-item-action">
+                    <a href="C:\Users\Toshiba\Desktop\UIUX\leaderboard.html" class="list-group-item list-group-item-action" id="second">
                         <i class="fa-solid fa-square-poll-vertical"></i>
                         <span class="ms-2 d-none d-lg-inline">Leaderboard</span>
                     </a>
@@ -403,115 +290,80 @@
                     </div>
                 </nav>
                 <div class="dashboard-container">
-                    <div class="first-flex">
-                        <div class="sales-summary">
-                            <button class="export-button">Export</button>
-                            <h2>Today's Sales</h2>
-                            <div>Sales Summary</div>
-                            <div class="summary-cards">
-                                <div class="summary-card red">
-                                    <div>$1K</div>
-                                    <p class="mid">Total Sales</p>
-                                    <p class="blueWord">+ 8% from yesterday</p>
-                                </div>
-                                <div class="summary-card yellow">
-                                    <span>300</span>
-                                    <p class="mid">Total Orders</p>
-                                    <p class="blueWord">+ 5% from yesterday</p>
-                                </div>
-                                <div class="summary-card green">
-                                    <span>5</span>
-                                    <p class="mid">Products Sold</p>
-                                    <p class="blueWord">+1.2% from yesterday</p>
-                                </div>
-                                <div class="summary-card purple">
-                                    <span>8</span>
-                                    <p class="mid">New Customers</p>
-                                    <p class="blueWord">+ 0.5 %from yesterday</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="visitor-insights">
-                            <h3>Visitor Insights</h3>
-                            <img src="C:\Users\Toshiba\Pictures\visitor insights.jpg" alt="Visitor Insights Graph"
-                                id="vsGraph">
-                        </div>
-                    </div>
-
-                    <div class="second-flex">
-                        <div class="total-revenue">
-                            <h3>Total Revenue</h3>
-                            <img src="C:\Users\Toshiba\Pictures\total revenue.jpg" alt="Total Revenue Graph"
-                                id="trGraph">
-                        </div>
-
-                        <div class="customer-satisfaction">
-                            <h3>Customer Satisfaction</h3>
-                            <img src="C:\Users\Toshiba\Pictures\cs.jpg" alt="Customer Satisfaction Graph" id="csGraph">
-                        </div>
-
-                        <div class="target-vs-reality">
-                            <h3>Target vs Reality</h3>
-                            <img src="C:\Users\Toshiba\Pictures\tvr.jpg" alt="Target vs Reality Graph" id="tvrGraph">
-                        </div>
-                    </div>
-
-                    <div class="third-flex">
-                        <div class="top-products">
-                            <h3>Top Products</h3>
-                            <table>
+                    <div class="leaderboard">
+                        <h1>Sales Leaderboard</h1>
+                        <table>
+                            <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Popularity</th>
-                                    <th>Sales</th>
+                                    <th>Rank</th>
+                                    <th>Salesperson</th>
+                                    <th>Sales ($)</th>
+                                    <th>Target (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Alex</td>
+                                    <td>43,000</td>
+                                    <td>120%</td>
                                 </tr>
                                 <tr>
-                                    <td>01</td>
-                                    <td>Home Decor Range</td>
-                                    <td>
-                                        <div class="popularity-bar" style="width: 45%;"></div>
-                                    </td>
-                                    <td>45%</td>
+                                    <td>2</td>
+                                    <td>Ray</td>
+                                    <td>40,000</td>
+                                    <td>110%</td>
                                 </tr>
                                 <tr>
-                                    <td>02</td>
-                                    <td>Disney Princess Pink Bag</td>
-                                    <td>
-                                        <div class="popularity-bar" style="width: 29%; background-color: purple;"></div>
-                                    </td>
-                                    <td>29%</td>
+                                    <td>3</td>
+                                    <td>Winchester</td>
+                                    <td>39,000</td>
+                                    <td>108%</td>
                                 </tr>
                                 <tr>
-                                    <td>03</td>
-                                    <td>Bathroom Essentials</td>
-                                    <td>
-                                        <div class="popularity-bar" style="width: 18%; background-color: green;"></div>
-                                    </td>
-                                    <td>18%</td>
+                                    <td>4</td>
+                                    <td>Sam</td>
+                                    <td>37,000</td>
+                                    <td>105%</td>
                                 </tr>
                                 <tr>
-                                    <td>04</td>
-                                    <td>Apple Smartwatches</td>
-                                    <td>
-                                        <div class="popularity-bar" style="width: 25%; background-color: yellow;"></div>
-                                    </td>
-                                    <td>25%</td>
+                                    <td>5</td>
+                                    <td>Dean</td>
+                                    <td>35,000</td>
+                                    <td>100%</td>
                                 </tr>
-                            </table>
-                        </div>
-
-                        <div class="sales-mapping">
-                            <h3>Sales Mapping By Country</h3>
-                            <img src="C:\Users\Toshiba\Pictures\sm.jpg" alt="Sales Mapping" id="smGraph">
-                        </div>
-
-                        <div class="volume-vs-service">
-                            <h3>Volume vs Service Level</h3>
-                            <img src="C:\Users\Toshiba\Pictures\vvs.jpg" alt="Volume vs Service Level Graph"
-                                id="vvsGraph">
-                        </div>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Erwin</td>
+                                    <td>32,000</td>
+                                    <td>98%</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Jean</td>
+                                    <td>30,000</td>
+                                    <td>95%</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Han</td>
+                                    <td>28,000</td>
+                                    <td>93%</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Ushi</td>
+                                    <td>27,000</td>
+                                    <td>92%</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Miyu</td>
+                                    <td>25,000</td>
+                                    <td>90%</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
