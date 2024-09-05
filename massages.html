@@ -157,21 +157,143 @@
             font-family: Arial, sans-serif;
         }
 
-        .message-header {
+        .chat-tabs {
+            padding: 20px;
+        }
+
+        .tabs {
+            flex: 1;
+        }
+
+        .tabs button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #fff;
+            border-bottom: 2px solid rgb(109, 109, 109);
+            cursor: pointer;
+        }
+
+        .chat-section {
+            display: flex;
+        }
+
+        .chat-list {
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .chat {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .chat img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .chat-data {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .chat-data h4 {
             margin-bottom: 5px;
-            font-size: 0.9em;
-            color: #555;
         }
 
-        .sender-name {
-            font-weight: bold;
+        .chat-data h6 {
+            color: #aaa;
         }
 
-        .message-content {
-            font-size: 1em;
-            color: #333;
+        .time {
+            color: #aaa;
+        }
+
+        .jason {
+            background-color: rgba(0, 195, 255, 0.1);
+        }
+
+        .conversation {
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            height: calc(100vh - 100px);
+            overflow-y: auto;
+            border: 1px solid #ddd;
+        }
+
+        .message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .message.left {
+            justify-content: flex-start;
+        }
+
+        .message.right {
+            justify-content: flex-end;
+        }
+
+        .message img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .con-data {
+            background-color: #f1f3f5;
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 60%;
+            position: relative;
+        }
+
+        .con-data h6 {
+            margin: 0;
+        }
+
+        .con-data .con-time {
+            display: block;
+            text-align: right;
+            font-size: 0.8em;
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        .message.left .con-data {
+            margin-left: 10px;
+            background-color: #eaf5ff;
+        }
+
+        .message.right .con-data {
+            margin-right: 10px;
+            background-color: #d4edda;
+        }
+
+        .message-send {
+            width: 100%;
+        }
+
+        .message-send input {
+            width: 93%;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .message-send {
+            color: rgb(0, 132, 255);
         }
     </style>
 </head>
@@ -281,11 +403,95 @@
                     </div>
                 </nav>
                 <div class="dashboard-container">
-                    <div class="message-header">
-                        <span class="sender-name">John</span>
+                    <div class="chat-tabs">
+                        <div class="tabs">
+                            <button>All</button>
+                            <button>Favorites</button>
+                            <button>Friends</button>
+                        </div>
                     </div>
-                    <div class="message-content">
-                        How are you today?
+                    <div class="chat-section">
+                        <div class="chat-list">
+                            <div class="chat jason">
+                                <img src="https://boo-prod.b-cdn.net/database/profiles/16967663630137d37692c68b0f2505a35898dbdcc222b.jpg?class=sm"
+                                    alt="Jason">
+                                <div class="chat-data">
+                                    <h4>Jason</h4>
+                                    <h6>Are you Ok?</h6>
+                                </div>
+                                <span class="time">10:10am</span>
+                            </div>
+                            <div class="chat">
+                                <img src="https://static.wikia.nocookie.net/universal-warriors/images/f/fc/Chigirip2.jpg/revision/latest?cb=20221105235054"
+                                    alt="Hob">
+                                <div class="chat-data">
+                                    <h4>Hob</h4>
+                                    <h6>Where should we go?</h6>
+                                </div>
+                                <span class="time">10:30am</span>
+                            </div>
+                            <div class="chat">
+                                <img src="https://static.wikia.nocookie.net/fairytail/images/5/5c/Wendy%27s_image.png/revision/latest?cb=20150703183824"
+                                    alt="Wendy">
+                                <div class="chat-data">
+                                    <h4>Wendy</h4>
+                                    <h6>Can you tell me how can I do this?</h6>
+                                </div>
+                                <span class="time">6:45am</span>
+                            </div>
+                        </div>
+                        <div class="conversation">
+                            <div class="message left">
+                                <img src="https://boo-prod.b-cdn.net/database/profiles/16967663630137d37692c68b0f2505a35898dbdcc222b.jpg?class=sm"
+                                    alt="Jason">
+                                <div class="con-data">
+                                    <h6>Hello</h6>
+                                    <span class="con-time">10:01</span>
+                                </div>
+                            </div>
+                            <div class="message right">
+                                <div class="con-data">
+                                    <h6>Hi, how are you?</h6>
+                                    <span class="con-time">10:03</span>
+                                </div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXBmfOplssDqgGhsd__tDZJ3s0LJGQ4BJ6Gg&s" alt="Eren">
+                            </div>
+                            <div class="message left">
+                                <img src="https://boo-prod.b-cdn.net/database/profiles/16967663630137d37692c68b0f2505a35898dbdcc222b.jpg?class=sm"
+                                    alt="Jason">
+                                <div class="con-data">
+                                    <h6>Yes, everything is fine.How about you?</h6>
+                                    <span class="con-time">10:05</span>
+                                </div>
+                            </div>
+                            <div class="message right">
+                                <div class="con-data">
+                                    <h6>No, I am suffering headaches</h6>
+                                    <span class="con-time">10:08</span>
+                                </div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXBmfOplssDqgGhsd__tDZJ3s0LJGQ4BJ6Gg&s" alt="Eren">
+                            </div>
+                            <div class="message left">
+                                <img src="https://boo-prod.b-cdn.net/database/profiles/16967663630137d37692c68b0f2505a35898dbdcc222b.jpg?class=sm"
+                                    alt="Jason">
+                                <div class="con-data">
+                                    <h6>Have you drink pills?</h6>
+                                    <span class="con-time">10:09</span>
+                                </div>
+                            </div>
+                            <div class="message left">
+                                <img src="https://boo-prod.b-cdn.net/database/profiles/16967663630137d37692c68b0f2505a35898dbdcc222b.jpg?class=sm"
+                                    alt="Jason">
+                                <div class="con-data">
+                                    <h6>Are you Ok?</h6>
+                                    <span class="con-time">10:10</span>
+                                </div>
+                            </div>
+                            <div class="message-send">
+                                <input type="text" placeholder="message......">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

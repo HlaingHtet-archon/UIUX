@@ -152,75 +152,112 @@
             background-color: #ffffff;
         }
 
-        .order-page {
-            max-width: 100%;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-selection {
-            margin-bottom: 30px;
-        }
-
-        .product {
+        .cards {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
             margin-bottom: 20px;
         }
 
-        .product-image {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-
-        .product label {
-            flex: 1;
-            font-size: 16px;
-        }
-
-        .product input {
-            width: 60px;
-            padding: 5px;
-            font-size: 16px;
-        }
-
-        .customer-info label {
-            flex: 1;
-            font-size: 16px;
-        }
-
-        .customer-info input {
-            width: 150px;
-            padding: 5px;
-            font-size: 16px;
-        }
-
-        .customer-info, .order-summary {
-            margin-bottom: 30px;
-        }
-
-        .summary p {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        #place-order {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            font-size: 18px;
-            color: white;
-            background-color: #03a3ff;
-            border: none;
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 300px;
+            margin-left: 20px;
+            margin-right: 40px;
             border-radius: 5px;
+            border-left: 5px solid #6970F7;
+            box-shadow: 2px 7px 10px #000000;
             cursor: pointer;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
         }
 
-        #place-order:hover {
-            background-color: #071ffa;
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h1 {
+            font-size: 25px;
+        }
+
+        .orders {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .order table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .orders table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 21.6%;
+        }
+
+
+        th {
+            border: 1px solid #ddd;
+            padding: 12px;
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .orders .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            color: #fff;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #4caf50;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+            border-radius: 5px;
+        }
+
+        .processing {
+            background-color: #7207ff;
+        }
+
+        .completed {
+            background-color: #4caf50;
+        }
+
+        .refunded {
+            background-color: #ff9102;
+        }
+
+        .payment {
+            background-color: #17a2b8;
+        }
+
+        .failed {
+            background-color: #dc3545;
         }
     </style>
 </head>
@@ -243,23 +280,28 @@
                         <i class="fa-solid fa-square-poll-vertical"></i>
                         <span class="ms-2 d-none d-lg-inline">Leaderboard</span>
                     </a>
-                    <a href="C:\Users\Toshiba\Desktop\UIUX\order.html" class="list-group-item list-group-item-action" id="first">
+                    <a href="C:\Users\Toshiba\Desktop\UIUX\order.html" class="list-group-item list-group-item-action"
+                        id="first">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="ms-2 d-none d-lg-inline">Order</span>
                     </a>
-                    <a href="C:\Users\Toshiba\Desktop\UIUX\products.html" class="list-group-item list-group-item-action">
+                    <a href="C:\Users\Toshiba\Desktop\UIUX\products.html"
+                        class="list-group-item list-group-item-action">
                         <i class="fa-solid fa-basket-shopping"></i>
                         <span class="ms-2 d-none d-lg-inline">Products</span>
                     </a>
-                    <a href="C:\Users\Toshiba\Desktop\UIUX\sales_report.html" class="list-group-item list-group-item-action">
+                    <a href="C:\Users\Toshiba\Desktop\UIUX\sales_report.html"
+                        class="list-group-item list-group-item-action">
                         <i class="fa-solid fa-chart-line"></i>
                         <span class="ms-2 d-none d-lg-inline">Sales Report</span>
                     </a>
-                    <a href="C:\Users\Toshiba\Desktop\UIUX\massages.html" class="list-group-item list-group-item-action">
+                    <a href="C:\Users\Toshiba\Desktop\UIUX\massages.html"
+                        class="list-group-item list-group-item-action">
                         <i class="fa-solid fa-message"></i>
                         <span class="ms-2 d-none d-lg-inline">Messages</span>
                     </a>
-                    <a href="C:\Users\Toshiba\Desktop\UIUX\settings.html" class="list-group-item list-group-item-action">
+                    <a href="C:\Users\Toshiba\Desktop\UIUX\settings.html"
+                        class="list-group-item list-group-item-action">
                         <i class="fa-solid fa-gear"></i>
                         <span class="ms-2 d-none d-lg-inline">Settings</span>
                     </a>
@@ -326,103 +368,100 @@
                     </div>
                 </nav>
                 <div class="dashboard-container">
-                    <div class="order-page">
-                        <h1>Place Your Order</h1>
-
-                        <form>
-                            <section class="product-selection">
-                                <h2>Select Products</h2>
-
-                                <div class="product">
-                                    <img src="https://haikyuumerchandisestore.com/wp-content/uploads/2021/05/2021-set-haikyuu-pvc-figure-keychains-584-700x700.jpg"
-                                        alt="Haikyuu Keychain" class="product-image">
-                                    <label for="product1">Haikyuu Keychain</label>
-                                    <input type="number" id="product1" name="product1" min="0" value="0" oninput="updateSummary()">
-                                </div>
-                                <div class="product">
-                                    <img src="https://ae01.alicdn.com/kf/S8b3aef7af93b468b93d8d603e6ca6febV.jpg?width=800&height=800&hash=1600" alt="Fukurodani Tracksuit" class="product-image">
-                                    <label for="product2">Fukurodani Tracksuit</label>
-                                    <input type="number" id="product2" name="product2" min="0" value="0" oninput="updateSummary()">
-                                </div>
-                                <div class="product">
-                                    <img src="https://down-my.img.susercontent.com/file/25d05545ca9ca9e26e82bdd36b7a747f_tn" alt="Aoba Johsai Tracksuit" class="product-image">
-                                    <label for="product3">Aoba Johsai Tracksuit</label>
-                                    <input type="number" id="product3" name="product3" min="0" value="0" oninput="updateSummary()">
-                                </div>
-                                <div class="product">
-                                    <img src="https://i.ebayimg.com/images/g/IfQAAOSwT-lkXarH/s-l1200.webp" alt="Karasuno Tracksuit" class="product-image">
-                                    <label for="product4">Karasuno Tracksuit</label>
-                                    <input type="number" id="product4" name="product4" min="0" value="0" oninput="updateSummary()">
-                                </div>
-                                <div class="product">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS71GtqHaeLSsJY8XFv_gVUiZLNNrQAC0KhVQ&s" alt="Nekoma Tracksuit" class="product-image">
-                                    <label for="product5">Nekoma Tracksuit</label>
-                                    <input type="number" id="product5" name="product5" min="0" value="0" oninput="updateSummary()">
-                                </div>
-                            </section>
-
-                            <section class="customer-info">
-                                <h2>Your Information</h2>
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
-                                
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                                
-                                <label for="address">Address:</label>
-                                <input type="textarea" id="address" name="address" required>
-                            </section>
-
-                            <section class="order-summary">
-                                <h2>Order Summary</h2>
-                                <div class="summary">
-                                    <div>Haikyuu Keychain: $<span id="summary-product1">3</span></div>
-                                    <div>Fukurodani Tracksuit: $<span id="summary-product2">20</span></div>
-                                    <div>Aoba Johsai Tracksuit: $<span id="summary-product3">20</span></div>
-                                    <div>Karasuno Tracksuit: $<span id="summary-product4">20</span></div>
-                                    <div>Nekoma Tracksuit: $<span id="summary-product5">20</span></div>
-                                </div>
-                            </section>
-
-                            <button type="submit" id="place-order">Place Order</button>
-                        </form>
+                    <div class="cards">
+                        <div class="card">
+                            <h1>Gross Revenue</h1>
+                            <div>$32,502.00</div>
+                            <div>Previous year: $46,018.00</div>
+                        </div>
+                        <div class="card">
+                            <h1>Refunds</h1>
+                            <div>$0.00</div>
+                            <div>Previous year: $0 .00</div>
+                        </div>
+                        <div class="card">
+                            <h1>Coupon</h1>
+                            <div>$10.00</div>
+                            <div>Previous year: $50.00</div>
+                        </div>
                     </div>
+
+                    <section class="orders">
+                        <h2>Orders</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Start Date</th>
+                                    <th>Order No.</th>
+                                    <th>Name</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024/08/31</td>
+                                    <td>9958</td>
+                                    <td>Paul</td>
+                                    <td>$12.00</td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar processing">Processing</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2024/08/20</td>
+                                    <td>8876</td>
+                                    <td>Robert</td>
+                                    <td>$20.00</td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar completed">Completed</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2024/08/26</td>
+                                    <td>7790</td>
+                                    <td>Yin</td>
+                                    <td>$7.80</td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar refunded">Refunded</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2024/08/25</td>
+                                    <td>8080</td>
+                                    <td>Jean</td>
+                                    <td>$11.00</td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar failed">Failed</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2024/09/03</td>
+                                    <td>9270</td>
+                                    <td>Diluc</td>
+                                    <td>$40.55</td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar payment">Pending payment</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
     </div>
-
-    <script>
-        function updateSummary() {
-            const product1Price = 3;
-            const product2Price = 20;
-            const product3Price = 20;
-            const product4Price = 20;
-            const product5Price = 20;
-
-            const product1Qty = parseInt(document.getElementById('product1').value) || 0;
-            const product2Qty = parseInt(document.getElementById('product2').value) || 0;
-            const product3Qty = parseInt(document.getElementById('product3').value) || 0;
-            const product4Qty = parseInt(document.getElementById('product4').value) || 0;
-            const product5Qty = parseInt(document.getElementById('product5').value) || 0;
-
-            const product1Total = product1Qty * product1Price;
-            const product2Total = product2Qty * product2Price;
-            const product3Total = product3Qty * product3Price;
-            const product4total = product4Qty * product4Price;
-            const product5Total = product5Qty * product5Price;
-
-            const totalAmount = product1Total + product2Total + product3Total + product4total + product5Total;
-
-            document.getElementById('summary-product1').textContent = product1Total;
-            document.getElementById('summary-product2').textContent = product2Total;
-            document.getElementById('summary-product3').textContent = product3Total;
-            document.getElementById('summary-product4').textContent = product4Total;
-            document.getElementById('summary-product5').textContent = product5Total;
-            document.getElementById('summary-total').textContent = totalAmount;
-        }
-    </script>
 </body>
 
 </html>
